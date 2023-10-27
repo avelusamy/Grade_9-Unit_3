@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts,fullpage,enumerate}
+
+\title{Latex Homework 9th Grade\\ Unit 3 - Methods of Proof - Techniques \\ Week 1 - Induction}
+\author{Dr. Chapman and Dr. Rupel}
+\date{Edited \today}
+
+\begin{document}
+
+\maketitle
+
+\section{}
+    Explain what is wrong with the following proof:\\
+    
+    \noindent Theorem: Any collection of points in the plane lie along a line.\\
+    
+    \noindent Proof:
+    Let $P(n)$ be the statement ``any collection of $n$ points in the plane lie along a line''.
+    Every point sits on a line, so $P(1)$ is true.
+    Assume $P(n)$ is true and consider a collection of $n+1$ points in the plane.
+    The first $n$ of these points and the last $n$ of these points each lie along a line by assumption.
+    But these share the middle $n-1$ points which lie on both lines and so the two lines must be the same.
+    It follows that $P(n+1)$ is true.
+    By the Principle of Mathematical Induction, $P(n)$ is true for all $n\ge 1$.
+
+\section{}
+    Let $p(x)=ax^5+bx^4+cx^3+dx^2+ex+f$ be a degree 5 polynomial.
+    \begin{enumerate}[(a)]
+        \item Write down a system of equations that states $\sum\limits_{k=1}^n k^4=p(n)$ for $n=0,1,2,3,4,5$.
+        \item Solve the system of equations from (a) to find the polynomial $p(x)$ explicitly.
+        \item Prove by induction that $\sum\limits_{k=1}^n k^4=p(n)$ for all $n\ge 0$.\\
+        \emph{Hint: It might simplify your proof a little if you factor $p(n)$ first.}
+    \end{enumerate}
+    
+\section{}
+    Define the sequence $f_n$ for $n\ge1$ by the recursion $f_{n+1}=f_n+f_{n-1}$ with $f_1=f_2=1$.
+    Prove by strong induction that $f_n=\frac{1}{\sqrt{5}}\left(\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n\right)$.\\
+    \emph{Hint: $\frac{1+\sqrt{5}}{2}=1-\left(\frac{1-\sqrt{5}}{2}\right)$ and $\left(\frac{1+\sqrt{5}}{2}\right)\left(\frac{1-\sqrt{5}}{2}\right)=-1$}
+
+\newpage
+
+\section{}
+    Consider the statement $P(n)$ given by ``$12|(n^4-n^2)$''.
+    \begin{enumerate}[(a)]
+        \item Write the beginning steps of an induction proof.
+        What expression would you have to show is divisible by $12$ in order to complete the proof?
+        Observe that this is not obvious and would require deeper considerations and possible casework.
+        \item Show instead that $P(n)$ being true implies $P(n+6)$ is true.
+        Use this to construct a proof that $P(n)$ is true for all $n\ge1$ by strong induction.
+    \end{enumerate}
+    
+\end{document}
